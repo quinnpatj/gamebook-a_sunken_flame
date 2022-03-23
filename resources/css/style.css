@@ -1,0 +1,382 @@
+
+* {
+    background-color: black;
+    color: white;
+    font-size: 18px;
+}
+
+
+/* -------------------- Header -------------------- */
+
+.navbar {
+    text-align: left;
+    padding-bottom: 50px;
+}
+
+.logo {
+    float: left;
+    width: 28px;
+    height: auto;
+    padding-right: 10px;
+}
+
+#home:link,
+#home:visited {
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+#home:hover,
+#home:active {
+    text-decoration: none;
+}
+
+
+/* -------------------- Page Content -------------------- */
+
+.centerpiece {
+    width: 30%;
+    height: auto;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.centerpiece-flicker {
+    width: 30%;
+    height: auto;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    animation: flickerfire 3s linear infinite alternate;
+}
+
+@keyframes flickerfire {
+    0% { opacity: 1; }
+    7% { opacity: 0.7; }
+    16% { opacity: 1; }
+    22% { opacity: 0.6; }
+    34% { opacity: 1; }
+    41% { opacity: 0.9; }
+    57% { opacity: 1; }
+    63% { opacity: 0.6; }
+    71% { opacity: 1; }
+    86% { opacity: 0.8; }
+    91% { opacity: 1; }
+    100% { opacity: 0.7; }
+}
+
+.centerpiece-dim {
+    width: 30%;
+    height: auto;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    animation: dimfire 3s linear infinite alternate;
+}
+
+@keyframes dimfire {
+    0% { opacity: 0.1; }
+    2% { opacity: 0.3; }
+    7% { opacity: 0.2; }
+    22% { opacity: 0.4; }
+    34% { opacity: 0.2; }
+    41% { opacity: 0.5; }
+    57% { opacity: 0.1; }
+    63% { opacity: 0.4; }
+    71% { opacity: 0.2; }
+    86% { opacity: 0.4; }
+    91% { opacity: 0.2; }
+    100% { opacity: 0.3; }
+}
+
+.centerpiece-fade {
+    width: 30%;
+    height: auto;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    animation: fadefire 25s linear 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadefire {
+    0% { opacity: 1; }
+    2% { opacity: 0.7; }
+    4% { opacity: 0.9; }
+    7% { opacity: 0.6; }
+    9% { opacity: 0.8; }
+    11% { opacity: 0.6; }
+    12% { opacity: 0.4; }
+    14% { opacity: 0.7; }
+    15% { opacity: 0.9; }
+    19% { opacity: 0.5; }
+    21% { opacity: 0.8; }
+    24% { opacity: 0.7; }
+    27% { opacity: 0.6; }
+    30% { opacity: 0.9; }
+    32% { opacity: 0.7; }
+    35% { opacity: 0.5; }
+    37% { opacity: 0.8; }
+    41% { opacity: 0.9; }
+    45% { opacity: 0.6; }
+    46% { opacity: 0.9; }
+    49% { opacity: 0.7; }
+    52% { opacity: 0.6; }
+    53% { opacity: 0.8; }
+    55% { opacity: 0.5; }
+    57% { opacity: 0.8; }
+    61% { opacity: 0.9; }
+    63% { opacity: 0.7; }
+    67% { opacity: 0.9; }
+    71% { opacity: 0.5; }
+    74% { opacity: 0.7; }
+    77% { opacity: 0.8; }
+    81% { opacity: 0.6; }
+    86% { opacity: 0.2; }
+    88% { opacity: 0.3; }
+    91% { opacity: 0.4; }
+    93% { opacity: 0.1; }
+    93% { opacity: 0.2; }
+    100% { opacity: 0; }
+}
+
+.text-block {
+    max-width: 70%;
+    text-align: center;
+    padding-left: 15%;
+    padding-bottom: 20px;
+}
+
+.text {
+    max-width: 70%;
+    text-align: center;
+    padding-left: 15%;
+    padding-bottom: 20px;
+    opacity: 0;
+    
+    /* fade in */
+    -webkit-animation: fadetext 3s;
+    /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadetext 3s;
+    /* Firefox < 16 */
+    -ms-animation: fadetext 3s;
+    /* Internet Explorer */
+    -o-animation: fadetext 3s;
+    /* Opera < 12.1 */
+    animation: fadetext 3s;
+    animation-fill-mode: forwards;
+}
+
+ @keyframes fadetext {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.choices-start {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.choices {
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    text-align: center;
+    margin: 0% 30% 0% 30%;
+    padding-bottom: 10px;
+    animation: fadechoice 10s;
+    animation-fill-mode: forwards;
+}
+
+ @keyframes fadechoice {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+#end {
+    animation: fadeinend 25s ease-in-out 0s 1;
+    animation-fill-mode: forwards;
+    
+}
+
+@keyframes fadeinend {
+    0% { color: black; }
+    40%, 78% { color: white; }
+    100% { color: #2f2f2f;}
+}
+
+#end:link,
+#end:visited {
+    text-decoration: none;
+    /*color: white;
+    transition: color 4s;*/
+}
+
+/*#end:hover,
+#end:active {
+    color: #1d1d1d;
+}*/
+
+.italic {
+    font-style: italic;
+}
+
+
+/* -------------------- Buttons -------------------- */
+
+.start a:link,
+.start a:visited {
+    display: inline-block;
+    color: #585858;
+    text-decoration: none;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px 10px;
+    transition: border 0.5s, color 0.5s;
+}
+
+.start a:hover,
+.start a:active {
+    color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 10px 10px;
+}
+
+.btn {
+    color: white;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.31);
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px 10px;
+    transition: text-shadow 0.5s, border 0.5s, color 0.5s;
+}
+
+.btn:hover {
+    color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px 10px;
+    text-shadow: #4e4e4e 13px -11px, #727272 -10px 7px, #343434 -12px -10px, #656565 8px 9px;
+}
+
+.button a:link,
+.button a:visited {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.31);
+    border-radius: 10px;
+    padding: 10px 10px;
+    transition: text-shadow 0.5s, border 0.5s, color 0.5s;
+}
+
+.button a:hover,
+.button a:active {
+    color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px 10px;
+    text-shadow: #4e4e4e 13px -11px, #727272 -10px 7px, #343434 -12px -10px, #656565 8px 9px;
+}
+
+.hidden a:link,
+.hidden a:visited {
+    display: inline-block;
+    color: #1f1f1f;
+    text-decoration: none;
+    border: 1px solid #2f2f2f;
+    border-radius: 10px;
+    padding: 10px 10px;
+    transition: border 0.5s, color 0.5s;
+}
+
+.hidden a:hover,
+.hidden a:active {
+    color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 10px 10px;
+}
+
+.copyright {
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    font-size: 10px;
+}
+
+
+/* -------------------- Tooltips -------------------- */
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    font-size: 12px;
+    width: 120px;
+    top: 150%;
+    left: 50%;
+    margin-left: -60px;
+    background-color: white;
+    color: black;
+    opacity: 0;
+    text-align: center;
+    padding: 5px 0;
+    border-style: outset;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    transition: opacity 1s;
+}
+
+.tooltip .tooltiptext::after {
+    content: " ";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -7px;
+    border-width: 7px;
+    border-style: outset;
+    border-color: transparent transparent white transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 0.75;
+}
+
+/*.tooltip .tooltipabove {
+    visibility: hidden;
+    font-size: 12px;
+    width: 120px;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -60px;
+    background-color: white;
+    color: black;
+    opacity: 0;
+    text-align: center;
+    padding: 5px 0;
+    border-style: outset;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    transition: opacity 1s;
+}
+
+.tooltip .tooltipabove::after {
+    content: " ";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -7px;
+    border-width: 7px;
+    border-style: outset;
+    border-color: white transparent transparent transparent;
+}
+
+.tooltip:hover .tooltipabove {
+    visibility: visible;
+    opacity: 0.75;
+}*/
